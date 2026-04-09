@@ -1,11 +1,11 @@
 'use client';
 
 interface MenuItemsProps {
-    onclick: () => void;
+    onClick: () => void;
     label: string;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({
+const MenuItem: React.FC<MenuItemsProps> = ({
     onClick,
     label
 }) => {
@@ -17,17 +17,15 @@ const MenuItem: React.FC<MenuItemProps> = ({
         py-3
         hover:bg-neutral-100
         transition
-        font-semibold"></div>
-    )
-    
-}
+        font-semibold
+        "
+        >
+            {label}
 
-const MenuItem = () => {
-    return ( 
-        <div>
 
         </div>
     );
-} 
+    
+}
 
 export default MenuItem;
