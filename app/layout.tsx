@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/navbar/ClientOnly";
-import Modal from "./components/modals/modals";
+import RegisterModal from "./components/Modals/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
 
 
 const geistSans = Geist({
@@ -33,7 +34,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <ClientOnly>
-          <Modal isOpen />
+          <ToasterProvider />
+          <RegisterModal />
+          
         <Navbar />
         </ClientOnly>
         {children}</body>
